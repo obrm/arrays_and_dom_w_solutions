@@ -29,7 +29,7 @@ firstBox.addEventListener("click", logBoxClick);
 // event.stopPropagation();
 // Click on the first box and see which event listener is called
 // Make the callback function that is being passed in to event listener of the Container a named function
-// and the function that is being passed in to event listener of the first box an anonyms function
+// and the function that is being passed in to the event listener of the first box an anonyms function
 
 container = document.getElementById("container");
 firstBox = document.querySelector(".box");
