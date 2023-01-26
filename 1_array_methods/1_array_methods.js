@@ -73,6 +73,7 @@ const data = [
   }
 ];
 
+
 // FILTER
 
 // Exercise 1: Use the filter method to get all the friends of John Doe
