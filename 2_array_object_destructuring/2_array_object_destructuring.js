@@ -78,10 +78,11 @@ const data = [
   }
 ];
 
+
 // ARRAY DESTRUCTURING
 
 // Exercise 1: Use array destructuring to get the first two hobbies of the first person in the data array
-const [firstPerson] = data;
+var [firstPerson] = data;
 const [firstHobby, secondHobby] = firstPerson.hobbies;
 console.log(firstHobby);
 console.log(secondHobby);
@@ -89,7 +90,7 @@ console.log(secondHobby);
 
 // Exercise 2: Use array destructuring to get the first and third friend of the second person in the data array
 const [, secondPerson] = data;
-const [firstFriend, , thirdFriend] = secondPerson.friends;
+var [firstFriend, , thirdFriend] = secondPerson.friends;
 console.log(firstFriend);
 console.log(thirdFriend);
 
@@ -108,3 +109,25 @@ console.log(city);
 console.log(name);
 console.log(age);
 
+
+// THE REST OPERATOR
+
+//Exercise 1: Put the last two objects from the data array in a new array
+const [, ...restOfData] = data;
+console.log(restOfData);
+
+/*Explanation:
+The rest operator allows us to get all elements of an array except the first one.
+In this case, the restOfData variable will contain the values of the last two objects in the data array.
+*/
+
+
+//Exercise 2: Put the last friend of the first person in a new array
+var [firstPerson] = data;
+const { friends: [, ...restOfFriends] } = firstPerson;
+console.log(restOfFriends);
+
+/*Explanation:
+The rest operator allows us to get all elements of a nested array except the first few.
+In this case, the restOfFriends variable will contain the values of all elements in the friends array from the firstPersonWithFriends3 object except the first two.
+*/
